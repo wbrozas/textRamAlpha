@@ -1,4 +1,11 @@
 textRamAlpha
 ============
 
-Made at a hackathon. Written in haskell. Takes in algebraic equations and reduces or solves them
+I hacked this up at a hackathon (hackru 2012) and won "Han Shot First Solo" for best hack by a one man team
+I used Twilio with python to run this code and accept text messages and return reductions
+Note: This was written in one night and has bugs (Especially in division)
+
+Input Format: All chars should be separated by spaces, operators are +-*/!()
+Ex: '( 3 * x + 2 ) * ( 3 * x + 2 )'
+Ex: '( x * y + 5 ) / y'
+Ex: '15 ! / 12 !'

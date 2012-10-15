@@ -1,11 +1,3 @@
-{- I hacked this up at a hackathon (hackru 2012) and won "Han Shot First Solo" for best hack by a one man team
- - I used Twilio with python to run this code and accept text messages and return reductions
- - Note: This was written in one night and has bugs (Especially in division)
- - Input Format: All chars should be separated by spaces, operators are +-*/!()
- - Ex: (3x+2)^2 would be '( 3 * x + 2 ) * ( 3 * x + 2 )'
- - Ex: (xy + 5)/y would be '( x * y + 5 ) / y'
- -}
-
 import Data.List
 import Data.Char
 import Data.Function
