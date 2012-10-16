@@ -123,7 +123,7 @@ negateTerm (Term c ms ds) = Term (-1 * c) ms ds
 
 fromIrToInfix' :: Exp -> [Char]
 fromIrToInfix' (Term c "" "") = show c
-fromIrToInfix' (Term c "" d) = if c == 1 then (take (2 * ((length d) - 1)) $ cycle "( ") ++ (head d : (foldl (\acc x -> " / " ++ [x] ++ " )" ++ acc) [] $ tail d)) else (take (2 * (length d)) $ cycle "( ") ++ (show c) ++ (foldl (\acc x -> " / " ++ [x] ++ " )" ++ acc) [] d)
+fromIrToInfix' (Term c "" d) = (take (2 * (length d)) $ cycle "( ") ++ (show c) ++ (foldl (\acc x -> " / " ++ [x] ++ " )" ++ acc) [] d)
 fromIrToInfix' (Term c m d) = if c == 1 then (take (2 * ((length m) - 1 + (length d))) $ cycle "( ") ++ (head m : (foldl (\acc x -> " * " ++ [x] ++ " )" ++ acc) [] $ tail m)) ++ (foldl (\acc x -> " / " ++ [x] ++ " )" ++ acc) [] d) else (take (2 * (length m) + (length d)) $ cycle "( ") ++ (show c) ++ (foldl (\acc x -> " * " ++ [x] ++ " )" ++ acc) [] m) ++ (foldl (\acc x -> " / " ++ [x] ++ " )" ++ acc) [] d)
 
 eval :: Operator -> Exp -> Exp -> Exp
