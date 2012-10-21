@@ -3,7 +3,7 @@ textRamAlpha
 
 I hacked this up at a hackathon (hackru 2012) and won "Han Shot First Solo" for best hack by a one man team.  
 I used Twilio with python to run this code and accept text messages and return reductions.  
-Note: This was written in one night and has bugs (Especially in division)  
+Note: This was written in one night (does not follow proper coding conventions, tabs, newlines ...) and has bugs (Especially in division)  
 
 Input Format: All chars should be separated by spaces, operators are +-*/!()
 
